@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06E5B3B2E50AD2168CE3C846 /* Pods_Audible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA28331A2439C9C7AE6A2560 /* Pods_Audible.framework */; };
 		9A2B725A1FDEFB02005464E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B72591FDEFB02005464E1 /* AppDelegate.swift */; };
 		9A2B725C1FDEFB02005464E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B725B1FDEFB02005464E1 /* ViewController.swift */; };
 		9A2B725F1FDEFB02005464E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2B725D1FDEFB02005464E1 /* Main.storyboard */; };
 		9A2B72611FDEFB02005464E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2B72601FDEFB02005464E1 /* Assets.xcassets */; };
 		9A2B72641FDEFB02005464E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2B72621FDEFB02005464E1 /* LaunchScreen.storyboard */; };
+		9A2B726C1FDF0794005464E1 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B726B1FDF0794005464E1 /* PageCell.swift */; };
+		9A2B726E1FDF1A36005464E1 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B726D1FDF1A36005464E1 /* Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B6FCA1A2BE873163452E5D3 /* Pods-Audible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Audible.release.xcconfig"; path = "Pods/Target Support Files/Pods-Audible/Pods-Audible.release.xcconfig"; sourceTree = "<group>"; };
 		9A2B72561FDEFB02005464E1 /* Audible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Audible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2B72591FDEFB02005464E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A2B725B1FDEFB02005464E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		9A2B72601FDEFB02005464E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A2B72631FDEFB02005464E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A2B72651FDEFB02005464E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A2B726B1FDF0794005464E1 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		9A2B726D1FDF1A36005464E1 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		BA28331A2439C9C7AE6A2560 /* Pods_Audible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Audible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C17D95442E3257C3618964FE /* Pods-Audible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Audible.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Audible/Pods-Audible.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06E5B3B2E50AD2168CE3C846 /* Pods_Audible.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		496C540472954C464866E481 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA28331A2439C9C7AE6A2560 /* Pods_Audible.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9A2B724D1FDEFB02005464E1 = {
 			isa = PBXGroup;
 			children = (
 				9A2B72581FDEFB02005464E1 /* Audible */,
 				9A2B72571FDEFB02005464E1 /* Products */,
+				B11434E865FA35979F169221 /* Pods */,
+				496C540472954C464866E481 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +75,23 @@
 			children = (
 				9A2B72591FDEFB02005464E1 /* AppDelegate.swift */,
 				9A2B725B1FDEFB02005464E1 /* ViewController.swift */,
+				9A2B726B1FDF0794005464E1 /* PageCell.swift */,
+				9A2B726D1FDF1A36005464E1 /* Page.swift */,
 				9A2B725D1FDEFB02005464E1 /* Main.storyboard */,
 				9A2B72601FDEFB02005464E1 /* Assets.xcassets */,
 				9A2B72621FDEFB02005464E1 /* LaunchScreen.storyboard */,
 				9A2B72651FDEFB02005464E1 /* Info.plist */,
 			);
 			path = Audible;
+			sourceTree = "<group>";
+		};
+		B11434E865FA35979F169221 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C17D95442E3257C3618964FE /* Pods-Audible.debug.xcconfig */,
+				1B6FCA1A2BE873163452E5D3 /* Pods-Audible.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A2B72681FDEFB02005464E1 /* Build configuration list for PBXNativeTarget "Audible" */;
 			buildPhases = (
+				327A1C6A940556E335141EE8 /* [CP] Check Pods Manifest.lock */,
 				9A2B72521FDEFB02005464E1 /* Sources */,
 				9A2B72531FDEFB02005464E1 /* Frameworks */,
 				9A2B72541FDEFB02005464E1 /* Resources */,
+				42A2E4FD903A40EC5AAD0EB5 /* [CP] Embed Pods Frameworks */,
+				1F1FA8CE6D3402486EF0403D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +164,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F1FA8CE6D3402486EF0403D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Audible/Pods-Audible-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		327A1C6A940556E335141EE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Audible-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42A2E4FD903A40EC5AAD0EB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Audible/Pods-Audible-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Audible/Pods-Audible-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9A2B72521FDEFB02005464E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +225,8 @@
 			files = (
 				9A2B725C1FDEFB02005464E1 /* ViewController.swift in Sources */,
 				9A2B725A1FDEFB02005464E1 /* AppDelegate.swift in Sources */,
+				9A2B726E1FDF1A36005464E1 /* Page.swift in Sources */,
+				9A2B726C1FDF0794005464E1 /* PageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +361,7 @@
 		};
 		9A2B72691FDEFB02005464E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C17D95442E3257C3618964FE /* Pods-Audible.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +377,7 @@
 		};
 		9A2B726A1FDEFB02005464E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B6FCA1A2BE873163452E5D3 /* Pods-Audible.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
