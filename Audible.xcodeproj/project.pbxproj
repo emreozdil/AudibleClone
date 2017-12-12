@@ -101,6 +101,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A2B72681FDEFB02005464E1 /* Build configuration list for PBXNativeTarget "Audible" */;
 			buildPhases = (
+				9A0773361FE06F1700245F01 /* Swiftlint */,
 				327A1C6A940556E335141EE8 /* [CP] Check Pods Manifest.lock */,
 				9A2B72521FDEFB02005464E1 /* Sources */,
 				9A2B72531FDEFB02005464E1 /* Frameworks */,
@@ -215,6 +216,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Audible/Pods-Audible-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		9A0773361FE06F1700245F01 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
