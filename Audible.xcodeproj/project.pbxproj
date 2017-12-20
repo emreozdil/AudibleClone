@@ -15,6 +15,7 @@
 		9A2B72641FDEFB02005464E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2B72621FDEFB02005464E1 /* LaunchScreen.storyboard */; };
 		9A2B726C1FDF0794005464E1 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B726B1FDF0794005464E1 /* PageCell.swift */; };
 		9A2B726E1FDF1A36005464E1 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B726D1FDF1A36005464E1 /* Page.swift */; };
+		9AA0EBE31FE9A30100510D54 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0EBE21FE9A30100510D54 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9A2B72651FDEFB02005464E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A2B726B1FDF0794005464E1 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		9A2B726D1FDF1A36005464E1 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		9AA0EBE21FE9A30100510D54 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BA28331A2439C9C7AE6A2560 /* Pods_Audible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Audible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17D95442E3257C3618964FE /* Pods-Audible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Audible.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Audible/Pods-Audible.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +77,7 @@
 			children = (
 				9A2B72591FDEFB02005464E1 /* AppDelegate.swift */,
 				9A2B725B1FDEFB02005464E1 /* ViewController.swift */,
+				9AA0EBE21FE9A30100510D54 /* Extensions.swift */,
 				9A2B726B1FDF0794005464E1 /* PageCell.swift */,
 				9A2B726D1FDF1A36005464E1 /* Page.swift */,
 				9A2B725D1FDEFB02005464E1 /* Main.storyboard */,
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA0EBE31FE9A30100510D54 /* Extensions.swift in Sources */,
 				9A2B725C1FDEFB02005464E1 /* ViewController.swift in Sources */,
 				9A2B725A1FDEFB02005464E1 /* AppDelegate.swift in Sources */,
 				9A2B726E1FDF1A36005464E1 /* Page.swift in Sources */,
