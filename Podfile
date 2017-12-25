@@ -7,4 +7,5 @@ target 'Audible' do
 
   # Pods for Audible
   pod 'SnapKit'
+  pod 'IQKeyboardManagerSwift'
 end

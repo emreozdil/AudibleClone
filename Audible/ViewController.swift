@@ -46,6 +46,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let button = UIButton(type: .system)
         button.setTitle("Skip", for: .normal)
         button.setTitleColor(UIColor.orange, for: .normal)
+        button.addTarget(self, action: #selector(skip), for: .touchUpInside)
         return button
     }()
 
@@ -53,11 +54,29 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let button = UIButton(type: .system)
         button.setTitle("Next", for: .normal)
         button.setTitleColor(UIColor.orange, for: .normal)
+        button.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
         return button
     }()
 
+    @objc func nextPage() {
+        let indexPath = IndexPath(item: pageController.currentPage + 1, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        pageController.currentPage += 1
+
+        if pageController.currentPage == pages.count {
+            showLoginScreen(pageNumber: pageController.currentPage)
+        }
+    }
+
+    @objc func skip() {
+        pageController.currentPage = pages.count - 1
+        nextPage()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        observeKeyboardNotification()
 
         view.addSubview(collectionView)
         view.addSubview(pageController)
@@ -95,10 +114,35 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         registerCells()
     }
 
+    fileprivate func observeKeyboardNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: .UIKeyboardWillHide, object: nil)
+    }
+
+    @objc func keyboardShow() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            let y: CGFloat = UIDevice.current.orientation.isLandscape ? -100 : -50
+            self.view.frame = CGRect(x: 0, y: y, width: self.view.frame.width, height: self.view.frame.height)
+        }, completion: nil)
+    }
+
+    @objc func keyboardHide() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        }, completion: nil)
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
+
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let pageNumber = Int(targetContentOffset.pointee.x / view.frame.width)
         pageController.currentPage = pageNumber
+        showLoginScreen(pageNumber: pageNumber)
+    }
 
+    fileprivate func showLoginScreen(pageNumber: Int) {
         if pageNumber == pages.count {
             pageController.snp.updateConstraints({ (update) in
                 update.bottom.equalToSuperview().offset(40)
@@ -128,7 +172,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     fileprivate func registerCells() {
         collectionView.register(PageCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: loginCellId)
+        collectionView.register(LoginCell.self, forCellWithReuseIdentifier: loginCellId)
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -150,5 +194,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: view.frame.height)
+    }
+
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        print(UIDevice.current.orientation)
+        self.collectionView.collectionViewLayout.invalidateLayout()
+        let indexPath = IndexPath(item: pageController.currentPage, section: 0)
+        DispatchQueue.main.async {
+            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            self.collectionView.reloadData()
+        }
     }
 }
