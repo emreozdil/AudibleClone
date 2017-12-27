@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  Audible
 //
 //  Created by Emre Özdil on 11/12/2017.
@@ -9,7 +9,11 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+protocol LoginViewControllerDelegate: class {
+    func finishLoggingIn()
+}
+
+class LoginViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, LoginViewControllerDelegate {
 
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -182,7 +186,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         if indexPath.item == pages.count {
-            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath)
+            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath) as! LoginCell
+            loginCell.delegate = self
             return loginCell
         }
 
@@ -190,6 +195,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let page = pages[indexPath.item]
         cell.page = page
         return cell
+    }
+
+    func finishLoggingIn() {
+        let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+
+        guard let mainNavigationController = rootViewController as? MainNavigationViewController else {
+            return
+        }
+
+        mainNavigationController.viewControllers = [HomeViewController()]
+
+        UserDefaults.standard.setIsLoggedIn(value: true)
+
+        dismiss(animated: true, completion: nil)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

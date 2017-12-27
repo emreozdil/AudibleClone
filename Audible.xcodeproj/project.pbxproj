@@ -8,29 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		06E5B3B2E50AD2168CE3C846 /* Pods_Audible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA28331A2439C9C7AE6A2560 /* Pods_Audible.framework */; };
+		9A16FFCA1FF439880009F359 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A16FFC91FF439880009F359 /* HomeViewController.swift */; };
+		9A16FFCC1FF43BF00009F359 /* UserDefaults+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A16FFCB1FF43BF00009F359 /* UserDefaults+Helpers.swift */; };
 		9A2B725A1FDEFB02005464E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B72591FDEFB02005464E1 /* AppDelegate.swift */; };
-		9A2B725C1FDEFB02005464E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B725B1FDEFB02005464E1 /* ViewController.swift */; };
-		9A2B725F1FDEFB02005464E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2B725D1FDEFB02005464E1 /* Main.storyboard */; };
+		9A2B725C1FDEFB02005464E1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B725B1FDEFB02005464E1 /* LoginViewController.swift */; };
 		9A2B72611FDEFB02005464E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2B72601FDEFB02005464E1 /* Assets.xcassets */; };
 		9A2B72641FDEFB02005464E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2B72621FDEFB02005464E1 /* LaunchScreen.storyboard */; };
 		9A2B726C1FDF0794005464E1 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B726B1FDF0794005464E1 /* PageCell.swift */; };
 		9A2B726E1FDF1A36005464E1 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B726D1FDF1A36005464E1 /* Page.swift */; };
 		9A5D41C51FEC1DD1003DF5DF /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5D41C41FEC1DD1003DF5DF /* LoginCell.swift */; };
+		9A9779891FF42315001574AD /* MainNavigationControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9779881FF42315001574AD /* MainNavigationControllerView.swift */; };
 		9AA0EBE31FE9A30100510D54 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0EBE21FE9A30100510D54 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B6FCA1A2BE873163452E5D3 /* Pods-Audible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Audible.release.xcconfig"; path = "Pods/Target Support Files/Pods-Audible/Pods-Audible.release.xcconfig"; sourceTree = "<group>"; };
+		9A16FFC91FF439880009F359 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9A16FFCB1FF43BF00009F359 /* UserDefaults+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Helpers.swift"; sourceTree = "<group>"; };
 		9A2B72561FDEFB02005464E1 /* Audible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Audible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2B72591FDEFB02005464E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A2B725B1FDEFB02005464E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9A2B725E1FDEFB02005464E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9A2B725B1FDEFB02005464E1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9A2B72601FDEFB02005464E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A2B72631FDEFB02005464E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A2B72651FDEFB02005464E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A2B726B1FDF0794005464E1 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		9A2B726D1FDF1A36005464E1 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		9A5D41C41FEC1DD1003DF5DF /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
+		9A9779881FF42315001574AD /* MainNavigationControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationControllerView.swift; sourceTree = "<group>"; };
 		9AA0EBE21FE9A30100510D54 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BA28331A2439C9C7AE6A2560 /* Pods_Audible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Audible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17D95442E3257C3618964FE /* Pods-Audible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Audible.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Audible/Pods-Audible.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,12 +82,14 @@
 			isa = PBXGroup;
 			children = (
 				9A2B72591FDEFB02005464E1 /* AppDelegate.swift */,
-				9A2B725B1FDEFB02005464E1 /* ViewController.swift */,
+				9A9779881FF42315001574AD /* MainNavigationControllerView.swift */,
+				9A2B725B1FDEFB02005464E1 /* LoginViewController.swift */,
 				9AA0EBE21FE9A30100510D54 /* Extensions.swift */,
 				9A5D41C41FEC1DD1003DF5DF /* LoginCell.swift */,
 				9A2B726B1FDF0794005464E1 /* PageCell.swift */,
+				9A16FFC91FF439880009F359 /* HomeViewController.swift */,
+				9A16FFCB1FF43BF00009F359 /* UserDefaults+Helpers.swift */,
 				9A2B726D1FDF1A36005464E1 /* Page.swift */,
-				9A2B725D1FDEFB02005464E1 /* Main.storyboard */,
 				9A2B72601FDEFB02005464E1 /* Assets.xcassets */,
 				9A2B72621FDEFB02005464E1 /* LaunchScreen.storyboard */,
 				9A2B72651FDEFB02005464E1 /* Info.plist */,
@@ -165,7 +171,6 @@
 			files = (
 				9A2B72641FDEFB02005464E1 /* LaunchScreen.storyboard in Resources */,
 				9A2B72611FDEFB02005464E1 /* Assets.xcassets in Resources */,
-				9A2B725F1FDEFB02005464E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,9 +252,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AA0EBE31FE9A30100510D54 /* Extensions.swift in Sources */,
-				9A2B725C1FDEFB02005464E1 /* ViewController.swift in Sources */,
+				9A2B725C1FDEFB02005464E1 /* LoginViewController.swift in Sources */,
 				9A2B725A1FDEFB02005464E1 /* AppDelegate.swift in Sources */,
+				9A16FFCA1FF439880009F359 /* HomeViewController.swift in Sources */,
 				9A2B726E1FDF1A36005464E1 /* Page.swift in Sources */,
+				9A9779891FF42315001574AD /* MainNavigationControllerView.swift in Sources */,
+				9A16FFCC1FF43BF00009F359 /* UserDefaults+Helpers.swift in Sources */,
 				9A2B726C1FDF0794005464E1 /* PageCell.swift in Sources */,
 				9A5D41C51FEC1DD1003DF5DF /* LoginCell.swift in Sources */,
 			);
@@ -258,14 +266,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9A2B725D1FDEFB02005464E1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A2B725E1FDEFB02005464E1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9A2B72621FDEFB02005464E1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
